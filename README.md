@@ -48,9 +48,13 @@ Uma aplicação que simula a utilização da técnica de pomodoro com o intuito 
 
 - [x] Front-end;
   - [x] Pagina Principal;
-  - [x] Pagina de Mapas;
-  - [x] Pagina para cadastro de orfanatos;
-  - [x] Pagina para detalhes de orfanatos.
+  - [x] Cronômetro;
+  - [x] Barra de Experiência;
+  - [x] Desafios;
+  - [x] Botão de Falha - Cancela Desafio e Reseta Cronômetro;
+  - [x] Botão de Completei - Adiciona Experiência do Desafio e Reseta Cronômetro;
+  - [x] Os dados do usuário são salvos em cookies;
+  - [x] Alternância entre tema claro e escuro.
 
 ### A milha extra...
 
