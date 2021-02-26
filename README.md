@@ -1,9 +1,9 @@
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/grochavieira/Happy?color=%2304D361&style=for-the-badge">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/grochavieira/MoveIt?color=%2304D361&style=for-the-badge">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/grochavieira/Happy?style=for-the-badge">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/grochavieira/MoveIt?style=for-the-badge">
   
-  <a href="https://github.com/grochavieira/Happy/commits/master">
+  <a href="https://github.com/grochavieira/MoveIt/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/grochavieira/MoveIt?style=for-the-badge">
   </a>
     
@@ -51,8 +51,9 @@ Uma aplicação que simula a utilização da técnica de pomodoro com o intuito 
   - [x] Cronômetro;
   - [x] Barra de Experiência;
   - [x] Desafios;
-  - [x] Botão de Falha - Cancela Desafio e Reseta Cronômetro;
+  - [x] Botão de Falhei - Cancela Desafio e Reseta Cronômetro;
   - [x] Botão de Completei - Adiciona Experiência do Desafio e Reseta Cronômetro;
+  - [x] Apresenta um Modal quando usuário sobe de nível;
   - [x] Os dados do usuário são salvos em cookies;
   - [x] Alternância entre tema claro e escuro.
 
