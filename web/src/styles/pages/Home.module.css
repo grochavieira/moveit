@@ -16,3 +16,20 @@
   gap: 6.25rem;
   align-content: center;
 }
+
+@media (max-width: 1150px) {
+  .container section {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 95%;
+    padding: 20px 10px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .container section {
+    padding-bottom: 100px;
+  }
+}
