@@ -16,7 +16,7 @@
  
 </p>
 <h1 align="center">
-    <img src="./assets/logo_full.svg" />
+    <img src="./assets/logo-full.svg" />
 </h1>
 
 <h4 align="center"> 
