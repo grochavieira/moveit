@@ -8,7 +8,7 @@ export function ToogleTheme() {
   const [isChecked, setIsChecked] = useState(theme === "light" ? true : false);
 
   useEffect(() => {
-    if (theme !== "") {
+    if (theme !== "undefined" && theme !== "") {
       document.documentElement.setAttribute("data-theme", theme);
     }
   }, []);
