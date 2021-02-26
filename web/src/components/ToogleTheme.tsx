@@ -15,8 +15,9 @@ export function ToogleTheme() {
 
   function handleTheme() {
     const htmlTheme = document.documentElement.getAttribute("data-theme");
-
-    if (htmlTheme === "light") {
+    console.log({ htmlTheme });
+    console.log({ isChecked });
+    if (htmlTheme !== "dark") {
       document.documentElement.setAttribute("data-theme", "dark");
       setIsChecked(false);
       Cookies.set("theme", "dark");
