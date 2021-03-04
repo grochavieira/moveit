@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--login-background);
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+.backgroundLogo {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 95%;
+  padding-left: 1rem;
+  padding-right: 5rem;
+}
+
+.logoLogin {
+  width: 100%;
+}
+
+.loginContainer h2 {
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.loginContainer div {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer div p {
+  margin-left: 15px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginContainer {
+    padding-right: 0;
+  }
+
+  .backgroundLogo {
+    width: 90%;
+  }
+}

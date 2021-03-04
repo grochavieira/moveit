@@ -6,6 +6,8 @@
 
 html {
   --white: #fff;
+  --linear-grad: 73, 83, 184;
+  --login-background: #5965e0;
   --background: #f2f3f5;
   --background-modal: #ccccccaa;
   --gray-line: #dcdde0;
@@ -21,6 +23,8 @@ html {
 
 html[data-theme="dark"] {
   --white: #000;
+  --linear-grad: 30, 30, 30;
+  --login-background: #000;
   --background: #111;
   --background-modal: #ffffff55;
   --gray-line: #333;
