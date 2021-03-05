@@ -12,6 +12,7 @@
 
 .container img {
   width: 2rem;
+  cursor: pointer;
 }
 
 @media (max-width: 680px) {

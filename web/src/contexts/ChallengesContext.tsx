@@ -2,6 +2,8 @@ import { createContext, useState, ReactNode, useEffect } from "react";
 import Cookies from "js-cookie";
 import challenges from "../../challenges.json";
 import { LevelUpModal } from "../components/LevelUpModal";
+import { useSession } from "next-auth/client";
+import axios from "axios";
 
 interface Challenge {
   type: "body" | "eye";
@@ -10,6 +12,8 @@ interface Challenge {
 }
 
 interface ChallengesContextData {
+  name: string;
+  profilePicture: string;
   level: number;
   currentExperience: number;
   challengesCompleted: number;
@@ -25,9 +29,6 @@ interface ChallengesContextData {
 
 interface ChallengesProviderProps {
   children: ReactNode;
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
   theme: string;
 }
 
@@ -37,14 +38,16 @@ export function ChallengesProvider({
   children,
   ...rest
 }: ChallengesProviderProps) {
+  const [session]: any = useSession();
+  console.log({ session });
+
   const theme = rest.theme ?? "dark";
-  const [level, setLevel] = useState(rest.level ?? 1);
-  const [currentExperience, setCurrentExperience] = useState(
-    rest.currentExperience ?? 0
-  );
-  const [challengesCompleted, setChallengesCompleted] = useState(
-    rest.challengesCompleted ?? 0
-  );
+  const [name, setName] = useState("");
+  const [profilePicture, setProfilePicture] = useState("");
+  const [level, setLevel] = useState(1);
+  const [totalExperience, setTotalExperience] = useState(0);
+  const [currentExperience, setCurrentExperience] = useState(0);
+  const [challengesCompleted, setChallengesCompleted] = useState(0);
 
   const [activeChallenge, setActiveChallenge] = useState(null);
   const [isLevelUpModalOpen, setIsLevelModalOpen] = useState(false);
@@ -52,14 +55,26 @@ export function ChallengesProvider({
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
   useEffect(() => {
-    Notification.requestPermission();
+    async function getUser() {
+      if (session) {
+        const { data } = await axios.post("api/server/user", {
+          userId: session.userId,
+        });
+        console.log(data);
+        setLevel(data.level);
+        setCurrentExperience(data.currentExperience);
+        setChallengesCompleted(data.challengesCompleted);
+        setTotalExperience(data.totalExperience);
+        setName(data.name);
+        setProfilePicture(data.image);
+      }
+    }
+    getUser();
   }, []);
 
   useEffect(() => {
-    Cookies.set("level", String(level));
-    Cookies.set("currentExperience", String(currentExperience));
-    Cookies.set("challengesCompleted", String(challengesCompleted));
-  }, [level, currentExperience, challengesCompleted]);
+    Notification.requestPermission();
+  }, []);
 
   function levelUp() {
     setLevel(level + 1);
@@ -96,21 +111,46 @@ export function ChallengesProvider({
     const { amount } = activeChallenge;
 
     let finalExperience = currentExperience + amount;
-
+    let newLevel = level;
     if (finalExperience >= experienceToNextLevel) {
       finalExperience = finalExperience - experienceToNextLevel;
       levelUp();
+      newLevel = level + 1;
     }
 
     setCurrentExperience(finalExperience);
     setActiveChallenge(null);
     setChallengesCompleted(challengesCompleted + 1);
+    setTotalExperience(totalExperience + amount);
+    updateUser(
+      newLevel,
+      finalExperience,
+      totalExperience + amount,
+      challengesCompleted + 1
+    );
+  }
+
+  async function updateUser(
+    level: number,
+    currentExperience: number,
+    totalExperience: number,
+    challengesCompleted: number
+  ) {
+    const response = await axios.post("api/server/updateUser", {
+      level,
+      currentExperience,
+      totalExperience,
+      challengesCompleted,
+      userId: session.userId,
+    });
+    console.log({ response });
   }
 
   return (
     <ChallengesContext.Provider
       value={{
-        theme,
+        name,
+        profilePicture,
         level,
         currentExperience,
         challengesCompleted,
@@ -121,6 +161,7 @@ export function ChallengesProvider({
         experienceToNextLevel,
         completeChallenge,
         closeLevelUpModal,
+        theme,
       }}
     >
       {children}

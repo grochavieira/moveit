@@ -9,26 +9,41 @@ import {
   ChallengesContext,
   ChallengesProvider,
 } from "../contexts/ChallengesContext";
+import Redirect from "../components/Redirect";
 import { SideBar } from "../components/SideBar";
 import Head from "next/head";
+import axios from "axios";
+import { signIn, signOut, useSession, session } from "next-auth/client";
 
 import styles from "../styles/pages/Home.module.css";
+import { useEffect } from "react";
 
 interface HomeProps {
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
   theme: string;
 }
 
 export default function Home(props: HomeProps) {
+  const [session]: any = useSession();
+  console.log({ session });
+
+  useEffect(() => {
+    async function getUser() {
+      if (session) {
+        const { data } = await axios.post("api/server/user", {
+          userId: session.userId,
+        });
+        console.log(data);
+      }
+    }
+    getUser();
+  }, []);
+
+  if (!session) {
+    return <Redirect to="/login" />;
+  }
+
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-      theme={props.theme}
-    >
+    <ChallengesProvider theme={props.theme}>
       <SideBar />
       <div className={styles.container}>
         <Head>
@@ -55,18 +70,10 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const {
-    level,
-    currentExperience,
-    challengesCompleted,
-    theme,
-  } = ctx.req.cookies;
+  const { theme } = ctx.req.cookies;
 
   return {
     props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted),
       theme: String(theme),
     },
   };

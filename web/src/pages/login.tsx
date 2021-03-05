@@ -1,6 +1,15 @@
 import styles from "../styles/pages/Login.module.css";
-import LoginInput from "../components/LoginInput";
+import { FiArrowRight } from "react-icons/fi";
+import { signIn, useSession } from "next-auth/client";
+import Redirect from "../components/Redirect";
+
 export default function Login() {
+  const [session] = useSession();
+
+  if (session) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <>
       <img
@@ -23,7 +32,15 @@ export default function Login() {
                 Faça login com seu Github <br /> para começar
               </p>
             </div>
-            <LoginInput />
+            <button
+              onClick={() => signIn("github")}
+              className={styles.githubLogin}
+            >
+              <span>Logar com Github</span>
+              <div>
+                <FiArrowRight size={36} color="#fff" />
+              </div>
+            </button>
           </div>
         </section>
       </div>
