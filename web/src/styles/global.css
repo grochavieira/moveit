@@ -10,6 +10,7 @@ html {
   --login-background: #5965e0;
   --background: #f2f3f5;
   --background-modal: #ccccccaa;
+  --background-ranking: #fff;
   --gray-line: #dcdde0;
   --text: #666666;
   --text-highlight: #b3b9ff;
@@ -27,6 +28,7 @@ html[data-theme="dark"] {
   --login-background: #000;
   --background: #111;
   --background-modal: #ffffff55;
+  --background-ranking: #000;
   --gray-line: #333;
   --text: #666666;
   --text-highlight: #b3b9ff;

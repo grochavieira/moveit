@@ -13,38 +13,26 @@ import Redirect from "../components/Redirect";
 import { SideBar } from "../components/SideBar";
 import Head from "next/head";
 import axios from "axios";
-import { signIn, signOut, useSession, session } from "next-auth/client";
+import { useSession, session } from "next-auth/client";
 
 import styles from "../styles/pages/Home.module.css";
 import { useEffect } from "react";
 
-interface HomeProps {
-  theme: string;
-}
-
-export default function Home(props: HomeProps) {
+export default function Home(props) {
   const [session]: any = useSession();
   console.log({ session });
 
   useEffect(() => {
-    async function getUser() {
-      if (session) {
-        const { data } = await axios.post("api/server/user", {
-          userId: session.userId,
-        });
-        console.log(data);
-      }
-    }
+    async function getUser() {}
     getUser();
   }, []);
 
-  if (!session) {
-    return <Redirect to="/login" />;
-  }
+  // if (!session) {
+  //   return <Redirect to="/login" />;
+  // }
 
   return (
-    <ChallengesProvider theme={props.theme}>
-      <SideBar />
+    <ChallengesProvider>
       <div className={styles.container}>
         <Head>
           <title>Inicio | MoveIt</title>
@@ -69,12 +57,6 @@ export default function Home(props: HomeProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { theme } = ctx.req.cookies;
+// export const getServerSideProps: GetServerSideProps = async () => {
 
-  return {
-    props: {
-      theme: String(theme),
-    },
-  };
-};
+// };

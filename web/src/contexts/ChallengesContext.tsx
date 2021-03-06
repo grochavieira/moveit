@@ -17,7 +17,6 @@ interface ChallengesContextData {
   level: number;
   currentExperience: number;
   challengesCompleted: number;
-  theme: string;
   levelUp: () => void;
   startNewChallenge: () => void;
   activeChallenge: Challenge;
@@ -29,19 +28,13 @@ interface ChallengesContextData {
 
 interface ChallengesProviderProps {
   children: ReactNode;
-  theme: string;
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
-export function ChallengesProvider({
-  children,
-  ...rest
-}: ChallengesProviderProps) {
+export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [session]: any = useSession();
-  console.log({ session });
 
-  const theme = rest.theme ?? "dark";
   const [name, setName] = useState("");
   const [profilePicture, setProfilePicture] = useState("");
   const [level, setLevel] = useState(1);
@@ -161,7 +154,6 @@ export function ChallengesProvider({
         experienceToNextLevel,
         completeChallenge,
         closeLevelUpModal,
-        theme,
       }}
     >
       {children}

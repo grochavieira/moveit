@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  background-color: var(--background-ranking);
+  border-radius: 5px;
+
+  margin-top: 10px;
+}
+
+.number {
+  padding: 2rem;
+  font-size: 2rem;
+  border-right: 3px solid var(--background);
+}
+
+.userInfo {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userProfile {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userProfile > img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+}
+
+.userProfile div {
+  margin-left: 1.3rem;
+}
+
+.userProfile div strong {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--title);
+}
+
+.userProfile div p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+.userProfile div p img {
+  margin-right: 0.5rem;
+}
+
+.userData {
+  display: flex;
+  flex-direction: row;
+  margin-right: 3rem;
+}
+
+.userData p {
+  margin-left: 4rem;
+}
+
+.userData p span {
+  color: #5965e0;
+}
+
+@media (max-width: 850px) {
+  .userData p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .number {
+    font-size: 1.5rem;
+    padding: 2rem 1.2rem;
+  }
+
+  .userProfile > img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .userProfile div strong {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--title);
+  }
+
+  .userData p {
+    margin-left: 1.5rem;
+  }
+
+  .userData {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .userProfile div strong {
+    font-size: 1rem;
+  }
+}

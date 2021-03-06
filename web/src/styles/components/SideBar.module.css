@@ -1,7 +1,7 @@
 .container {
   position: fixed;
   height: 100%;
-  padding: 32px 18px;
+  padding: 32px 0px;
   background-color: var(--white);
 
   display: flex;
@@ -15,14 +15,53 @@
   cursor: pointer;
 }
 
-@media (max-width: 680px) {
+.navContainer {
+  padding: 1rem 1.8rem;
+  margin-top: 5px;
+  border-right: 2px solid #4953b8;
+  transition: all 0.2s;
+}
+
+.navContainer svg {
+  cursor: pointer;
+  color: #4953b8;
+}
+
+.navContainerSelected {
+  padding: 1rem 1.8rem;
+  margin-top: 5px;
+  transition: all 0.2s;
+}
+
+.navContainerSelected svg {
+  cursor: pointer;
+  color: #666;
+}
+
+@media (max-width: 1150px) {
   .container {
     width: 100%;
     height: 10px;
+    padding: 30px 18px;
     bottom: 0;
 
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .container > div {
+    display: flex;
+  }
+
+  .navContainer {
+    padding: 1.1rem 1.8rem;
+    border: 0;
+    border-top: 2px solid #4953b8;
+  }
+
+  .navContainerSelected {
+    padding: 1.1rem 1.8rem;
+    transition: all 0.2s;
   }
 }

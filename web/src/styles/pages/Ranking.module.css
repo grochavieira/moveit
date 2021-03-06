@@ -1,0 +1,100 @@
+.container {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.titleTab {
+  width: 100%;
+
+  margin-left: 5px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titleTab > div {
+  display: flex;
+}
+
+.titleTab > div p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 2rem;
+  text-transform: uppercase;
+}
+
+.titleTab > div:last-child {
+  margin-right: 0.7rem;
+}
+
+.titleTab > div:last-child p:first-child {
+  margin-right: 5rem;
+}
+
+@media (max-width: 850px) {
+  .titleTab > div:last-child p:first-child {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  .titleTab > div p {
+    font-size: 0.8rem;
+  }
+
+  .titleTab > div p {
+    margin-right: 0rem;
+  }
+
+  .titleTab > div:first-child p:first-child {
+    margin-left: -0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .titleTab > div:last-child {
+    margin-right: 0.5rem;
+  }
+
+  .titleTab > div:last-child p:first-child {
+    margin-right: 1.7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  .titleTab > div p {
+    font-size: 0.65rem;
+  }
+
+  .titleTab > div p {
+    margin-right: 0rem;
+  }
+
+  .titleTab > div:first-child p:first-child {
+    margin-left: -0.3rem;
+    margin-right: 1.35rem;
+  }
+
+  .titleTab > div:last-child {
+    margin-right: 0.8rem;
+  }
+
+  .titleTab > div:last-child p:first-child {
+    margin-right: 1.2rem;
+  }
+}
