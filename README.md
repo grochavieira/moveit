@@ -134,10 +134,15 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 Além das ferramentas anteriores, após clonar o repositório, é necessário adicionar váriaveis de ambiente dentro de um arquivo .env na raíz (root) do projeto, que são:
 
 GITHUB_CLIENT_ID="É pego no Auth do seu github"
+
 GITHUB_CLIENT_SECRET="É pego no Auth do seu github"
+
 NEXTAUTH_URL="URL base do seu site, como http://localhost:3000 ou https://moveit-taupe-sigma.vercel.app/"
+
 AUTH_SECRET="Uma string de texto aleatória que é usada no NextAuth"
+
 JWT_SECRET="Uma string de texto aleatória que é usada no NextAuth"
+
 MONGODB_URI="URL do mongodb para armazenar os dados"
 
 #### 🧭 Rodando a aplicação web (Frontend)
