@@ -23,7 +23,6 @@ const options = {
 
       const collection = db.collection("users");
       const searchedUser = await collection.findOne({ userId: session.userId });
-      console.log({ searchedUser });
       if (!searchedUser) {
         await collection.insertOne({
           userId: session.userId,

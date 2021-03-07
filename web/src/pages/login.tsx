@@ -1,8 +1,8 @@
-import styles from "../styles/pages/Login.module.css";
 import { FiArrowRight } from "react-icons/fi";
 import { signIn, useSession } from "next-auth/client";
 import Redirect from "../components/Redirect";
-
+import Head from "next/head";
+import styles from "../styles/pages/Login.module.css";
 export default function Login() {
   const [session] = useSession();
 
@@ -12,6 +12,9 @@ export default function Login() {
 
   return (
     <>
+      <Head>
+        <title>Login | MoveIt</title>
+      </Head>
       <img
         className={styles.backgroundLogo}
         src="Simbolo.svg"

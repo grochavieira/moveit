@@ -53,7 +53,6 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         const { data } = await axios.post("api/server/user", {
           userId: session.userId,
         });
-        console.log(data);
         setLevel(data.level);
         setCurrentExperience(data.currentExperience);
         setChallengesCompleted(data.challengesCompleted);
@@ -66,7 +65,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   }, []);
 
   useEffect(() => {
-    Notification.requestPermission();
+    // Notification.requestPermission();
   }, []);
 
   function levelUp() {
@@ -86,11 +85,11 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
     new Audio("/notification.mp3").play();
 
-    if (Notification.permission === "granted") {
-      new Notification("Novo desafio!", {
-        body: `Valendo ${challenge.amount}xp!`,
-      });
-    }
+    // if (Notification.permission === "granted") {
+    //   new Notification("Novo desafio!", {
+    //     body: `Valendo ${challenge.amount}xp!`,
+    //   });
+    // }
   }
 
   function resetChallenge() {
@@ -136,7 +135,6 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
       challengesCompleted,
       userId: session.userId,
     });
-    console.log({ response });
   }
 
   return (

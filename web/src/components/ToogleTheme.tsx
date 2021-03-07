@@ -7,7 +7,6 @@ import { useContext, useEffect, useState } from "react";
 export function ToogleTheme() {
   const theme = Cookies.get("theme");
   const [dataTheme, setDataTheme] = useState("dark");
-  console.log({ dataTheme });
 
   useEffect(() => {
     if (theme) {
@@ -19,7 +18,6 @@ export function ToogleTheme() {
   function handleTheme() {
     const htmlTheme = document.documentElement.getAttribute("data-theme");
 
-    console.log({ htmlTheme });
     if (htmlTheme !== "dark") {
       document.documentElement.setAttribute("data-theme", "dark");
       setDataTheme("dark");

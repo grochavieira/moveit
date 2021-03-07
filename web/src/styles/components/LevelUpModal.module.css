@@ -15,7 +15,7 @@
   background: var(--white);
   width: 100%;
   max-width: 400px;
-  padding: 2rem 3rem;
+  padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   text-align: center;
@@ -41,11 +41,46 @@
   margin-top: 0.25rem;
 }
 
-.container button {
+/* .twitterButton {
+  width: 100%;
+  margin-top: 30px;
+  padding: 1.2rem 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--blue-twitter);
+  background-color: rgba(16, 66, 88, 0.1);
+
+  border: 0;
+  border-top: 1px solid #666;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  transition: all 0.2s;
+}
+
+.twitterButton:hover {
+  opacity: 0.8;
+}
+
+.twitterButton svg {
+  margin-left: 10px;
+} */
+
+.container button:last-child {
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
   background: transparent;
   border: 0;
   font-size: 0;
+  transition: all 0.2s;
+}
+
+.container button:last-child:hover {
+  opacity: 0.8;
 }

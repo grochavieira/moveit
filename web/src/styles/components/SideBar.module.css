@@ -30,6 +30,7 @@
 .navContainerSelected {
   padding: 1rem 1.8rem;
   margin-top: 5px;
+  border-right: 2px solid transparent;
   transition: all 0.2s;
 }
 
@@ -63,5 +64,7 @@
   .navContainerSelected {
     padding: 1.1rem 1.8rem;
     transition: all 0.2s;
+    border: 0;
+    border-top: 2px solid transparent;
   }
 }

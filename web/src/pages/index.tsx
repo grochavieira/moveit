@@ -11,17 +11,16 @@ import {
 } from "../contexts/ChallengesContext";
 import Redirect from "../components/Redirect";
 import Head from "next/head";
-import axios from "axios";
 import { useSession, session } from "next-auth/client";
 
 import styles from "../styles/pages/Home.module.css";
 
-export default function Home(props) {
+export default function Home() {
   const [session]: any = useSession();
 
-  // if (!session) {
-  //   return <Redirect to="/login" />;
-  // }
+  if (!session) {
+    return <Redirect to="/login" />;
+  }
 
   return (
     <ChallengesProvider>
