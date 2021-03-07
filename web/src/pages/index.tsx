@@ -10,22 +10,14 @@ import {
   ChallengesProvider,
 } from "../contexts/ChallengesContext";
 import Redirect from "../components/Redirect";
-import { SideBar } from "../components/SideBar";
 import Head from "next/head";
 import axios from "axios";
 import { useSession, session } from "next-auth/client";
 
 import styles from "../styles/pages/Home.module.css";
-import { useEffect } from "react";
 
 export default function Home(props) {
   const [session]: any = useSession();
-  console.log({ session });
-
-  useEffect(() => {
-    async function getUser() {}
-    getUser();
-  }, []);
 
   // if (!session) {
   //   return <Redirect to="/login" />;
@@ -56,7 +48,3 @@ export default function Home(props) {
     </ChallengesProvider>
   );
 }
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-
-// };

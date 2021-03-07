@@ -10,7 +10,7 @@ export interface User {
   level: number;
   currentExperience: number;
   totalExperience: number;
-  registeredAt: Date;
+  // registeredAt: Date;
 }
 
 interface LeaderboardProfileProps {
@@ -22,7 +22,7 @@ export function LeaderboardProfile({ user, rank }: LeaderboardProfileProps) {
   const [isMobileSize, setIsMobileSize] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth <= 500) {
+    if (window.innerWidth <= 550) {
       setIsMobileSize(true);
     }
   }, []);
@@ -43,8 +43,8 @@ export function LeaderboardProfile({ user, rank }: LeaderboardProfileProps) {
 
           <div className={styles.userData}>
             <p>
-              <span>{user.challengesCompleted}</span>{" "}
-              {isMobileSize ? "comp." : "completados"}
+              <span>{user.challengesCompleted}</span>
+              {isMobileSize ? " comp." : " completados"}
             </p>
 
             <p>

@@ -13,36 +13,41 @@
 
   margin-left: 5px;
   margin-top: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.titleTab p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.titleTab > div {
+  width: 100%;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+  margin-left: 1.5rem;
 }
 
-.titleTab > div {
+.titleTab > div div {
+  width: 100%;
   display: flex;
+  margin-right: 0.4rem;
+  max-width: 20rem;
 }
 
-.titleTab > div p {
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-right: 2rem;
-  text-transform: uppercase;
-}
-
-.titleTab > div:last-child {
-  margin-right: 0.7rem;
-}
-
-.titleTab > div:last-child p:first-child {
-  margin-right: 5rem;
-}
-
-@media (max-width: 850px) {
-  .titleTab > div:last-child p:first-child {
-    margin-right: 3.2rem;
-  }
+.titleTab > div div p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 700px) {
@@ -50,51 +55,39 @@
     padding: 2.5rem 1rem;
   }
 
-  .titleTab > div p {
+  .titleTab p {
     font-size: 0.8rem;
   }
 
-  .titleTab > div p {
-    margin-right: 0rem;
+  .titleTab > p {
+    margin-left: -0.2rem;
   }
 
-  .titleTab > div:first-child p:first-child {
-    margin-left: -0.5rem;
-    margin-right: 0.5rem;
+  .titleTab > div {
+    margin-left: 0.8rem;
   }
 
-  .titleTab > div:last-child {
-    margin-right: 0.5rem;
-  }
-
-  .titleTab > div:last-child p:first-child {
-    margin-right: 1.7rem;
+  .titleTab > div div {
+    margin-right: 0.4rem;
+    max-width: 15rem;
   }
 }
 
-@media (max-width: 500px) {
-  .container {
-    padding: 2.5rem 1rem;
-  }
-
-  .titleTab > div p {
+@media (max-width: 550px) {
+  .titleTab p {
     font-size: 0.65rem;
   }
 
-  .titleTab > div p {
-    margin-right: 0rem;
+  .titleTab > p {
+    margin-left: -0.4rem;
   }
 
-  .titleTab > div:first-child p:first-child {
-    margin-left: -0.3rem;
-    margin-right: 1.35rem;
+  .titleTab > div {
+    margin-left: 0.5rem;
   }
 
-  .titleTab > div:last-child {
-    margin-right: 0.8rem;
-  }
-
-  .titleTab > div:last-child p:first-child {
-    margin-right: 1.2rem;
+  .titleTab > div div {
+    margin-right: 0.4rem;
+    max-width: 10rem;
   }
 }
