@@ -42,7 +42,7 @@ Uma aplicação que simula a utilização da técnica de pomodoro com o intuito 
 
 Abaixo disponibilizei um link para o site hospedado:
 
-<a align="center" href="https://moveit-bja403xz6-grochavieira.vercel.app/">
+<a align="center" href="https://moveit-taupe-sigma.vercel.app/">
     <img alt="Site MoveIt" src="https://img.shields.io/static/v1?label=Demonstra%C3%A7%C3%A3o&message=MoveIt&color=4953B8&style=for-the-badge&logo=vercel">
 </a>
 
@@ -81,7 +81,8 @@ Abaixo disponibilizei um link para o site hospedado:
 - [x] Página de Rankings;
   - [x] Layout Completo;
   - [x] É criado um ranking de quem tem mais experiência;
-- [x] A aplicação está totalmente responsiva.
+- [x] A aplicação está responsiva.
+- [x] A aplicação está totalmente funcional em produção.
 
 ---
 
