@@ -67,28 +67,52 @@ Abaixo disponibilizei um link para o site hospedado:
 
 - [x] Troca de temas da interface, na qual o tema é salvo dentro de um cookie;
 - [x] A troca de temas é feita pela propriedade data-theme da tag html;
+- [x] Foi adicionado rotas para uso do MongoDB como banco de dados da aplicação;
 - [x] Foi criado uma Side Bar;
-- [x] A aplicação está responsiva.
+  - [x] Navegação entre Página principal e de Rankings;
+  - [x] Botão de LogOut;
+  - [x] Troca de Temas;
+- [x] Página de Login;
+  - [x] Layout Completo;
+  - [x] Login pelo Github com NextAuth;
+  - [x] Usuário é registrado no banco de dados (se não existir);
+- [x] Página Principal:
+  - [x] Os dados do usuário são atualizados;
+- [x] Página de Rankings;
+  - [x] Layout Completo;
+  - [x] É criado um ranking de quem tem mais experiência;
+- [x] A aplicação está totalmente responsiva.
 
 ---
 
 ## 🎨 Layout
 
-### front-end web
+### Página de Login
+
+<div align="center">
+    <img width="100%" src="./assets/login_light.PNG" />
+    <img width="100%" src="./assets/login_dark.PNG " />
+</div>
+
+### Página Principal
 
 <div align="center">
     <img width="100%" src="./assets/main_light.PNG" />
     <img width="100%" src="./assets/main_dark.PNG " />
 </div>
 
-<div align="center">
-    <img width="100%" src="./assets/challenge_light.PNG" />
-    <img width="100%" src="./assets/challenge_dark.PNG " />
-</div>
+### Modal que aparece ao súbir de nível
 
 <div align="center">
     <img width="100%" src="./assets/modal_light.PNG" />
     <img width="100%" src="./assets/modal_dark.PNG " />
+</div>
+
+### Página de Rankings
+
+<div align="center">
+    <img width="100%" src="./assets/ranking_light.PNG" />
+    <img width="100%" src="./assets/ranking_dark.PNG " />
 </div>
 
 ---
@@ -104,6 +128,17 @@ Este projeto contém apenas uma parte:
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://classic.yarnpkg.com/en/docs/install).
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### ⚠️ Variáveis de Ambiente
+
+Além das ferramentas anteriores, após clonar o repositório, é necessário adicionar váriaveis de ambiente dentro de um arquivo .env na raíz (root) do projeto, que são:
+
+GITHUB_CLIENT_ID="É pego no Auth do seu github"
+GITHUB_CLIENT_SECRET="É pego no Auth do seu github"
+NEXTAUTH_URL="URL base do seu site, como http://localhost:3000 ou https://moveit-taupe-sigma.vercel.app/"
+AUTH_SECRET="Uma string de texto aleatória que é usada no NextAuth"
+JWT_SECRET="Uma string de texto aleatória que é usada no NextAuth"
+MONGODB_URI="URL do mongodb para armazenar os dados"
 
 #### 🧭 Rodando a aplicação web (Frontend)
 
@@ -139,7 +174,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **[Next.js](https://nextjs.org/)**
 - **[Context](https://pt-br.reactjs.org/docs/context.html)**
 - **[js-cookie](https://github.com/js-cookie/js-cookie)**
-- **[Css-Modules](https://github.com/css-modules/css-modules)**
+- **[css-Modules](https://github.com/css-modules/css-modules)**
+- **[MongoDB](https://www.mongodb.com/)**
+- **[Next-Auth](https://next-auth.js.org/)**
+- **[React Icons](https://react-icons.github.io/react-icons/)**
 
 > Veja o arquivo [package.json](https://github.com/grochavieira/MoveIt/blob/master/web/package.json)
 
