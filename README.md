@@ -1,10 +1,10 @@
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/grochavieira/MoveIt?color=%2304D361&style=for-the-badge">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/grochavieira/moveit?color=%2304D361&style=for-the-badge">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/grochavieira/MoveIt?style=for-the-badge">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/grochavieira/moveit?style=for-the-badge">
   
-  <a href="https://github.com/grochavieira/MoveIt/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/grochavieira/MoveIt?style=for-the-badge">
+  <a href="https://github.com/grochavieira/moveit/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/grochavieira/moveit?style=for-the-badge">
   </a>
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge">
@@ -43,7 +43,7 @@ Uma aplicação que simula a utilização da técnica de pomodoro com o intuito 
 Abaixo disponibilizei um link para o site hospedado:
 
 <a align="center" href="https://moveit-taupe-sigma.vercel.app/">
-    <img alt="Site MoveIt" src="https://img.shields.io/static/v1?label=Demonstra%C3%A7%C3%A3o&message=MoveIt&color=4953B8&style=for-the-badge&logo=vercel">
+    <img alt="Site moveit" src="https://img.shields.io/static/v1?label=Demonstra%C3%A7%C3%A3o&message=moveit&color=4953B8&style=for-the-badge&logo=vercel">
 </a>
 
 ---
@@ -151,10 +151,10 @@ MONGODB_URI="URL do mongodb para armazenar os dados"
 ```bash
 
 # Clone este repositório
-$ git clone https://github.com/grochavieira/MoveIt.git
+$ git clone https://github.com/grochavieira/moveit.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd MoveIt
+$ cd moveit
 
 # Vá para a pasta da aplicação Front End
 $ cd web
@@ -185,7 +185,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **[Next-Auth](https://next-auth.js.org/)**
 - **[React Icons](https://react-icons.github.io/react-icons/)**
 
-> Veja o arquivo [package.json](https://github.com/grochavieira/MoveIt/blob/master/web/package.json)
+> Veja o arquivo [package.json](https://github.com/grochavieira/moveit/blob/master/web/package.json)
 
 #### **Utilitários**
 
