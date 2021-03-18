@@ -16,7 +16,7 @@
  
 </p>
 <h1 align="center">
-    <img src="./assets/logo-full.png" />
+    <img src="./assets/logo-black.png" />
 </h1>
 
 <h4 align="center"> 
