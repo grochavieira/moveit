@@ -9,7 +9,6 @@
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat">
   
- 
 </p>
 <h1 align="center">
     <img src="./assets/logo_black.png" />
@@ -200,11 +199,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
  <sub><strong>🌟 Guilherme Rocha Vieira 🌟</strong></sub>
 </p>
 
-<p align="center">
-
 [![Linkedin Badge](https://img.shields.io/badge/-linkedin-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/grochavieira/)](https://www.linkedin.com/in/grochavieira/)
-
-</p>
 
 ---
 
