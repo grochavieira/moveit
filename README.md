@@ -39,7 +39,7 @@ Uma aplicação que simula a utilização da técnica de pomodoro com o intuito 
 Abaixo disponibilizei um link para o site hospedado:
 
 <a align="center" href="https://moveit-taupe-sigma.vercel.app/">
-    <img alt="Site moveit" src="https://img.shields.io/static/v1?label=Demonstra%C3%A7%C3%A3o&message=moveit&color=4953B8&style=flat&logo=vercel">
+    <img alt="Site moveit" src="https://img.shields.io/static/v1?label=site&message=moveit&color=4953B8&style=flat&logo=vercel">
 </a>
 
 ---
