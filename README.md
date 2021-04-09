@@ -133,21 +133,9 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://classic.yarnpkg.com/en/docs/install).
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-### ⚠️ Variáveis de Ambiente
+### Váriaveis de Ambiente
 
-Além das ferramentas anteriores, após clonar o repositório, é necessário adicionar váriaveis de ambiente dentro de um arquivo .env na raíz (root) do projeto, que são:
-
-GITHUB_CLIENT_ID="É pego no Auth do seu github"
-
-GITHUB_CLIENT_SECRET="É pego no Auth do seu github"
-
-NEXTAUTH_URL="URL base do seu site, como http://localhost:3000 ou https://moveit-taupe-sigma.vercel.app/"
-
-AUTH_SECRET="Uma string de texto aleatória que é usada no NextAuth"
-
-JWT_SECRET="Uma string de texto aleatória que é usada no NextAuth"
-
-MONGODB_URI="URL do mongodb para armazenar os dados"
+> Veja o arquivo [.env.sample](https://github.com/grochavieira/moveit/blob/master/web/.env.sample)
 
 #### 🧭 Rodando a aplicação web (Frontend)
 
